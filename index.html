@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShoppingGuru.pk - New Gadgets, Phones, Watches Price in Pakistan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5}
+header{background:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+header img{width:230px;max-width:90%}
+header p{font-size:13px;color:#555;margin-top:2px}
+.banner img{width:100%;display:block}
+nav{background:#ffcc00;padding:10px;text-align:center;overflow-x:auto;white-space:nowrap}
+nav button{border:none;background:#111;color:#fff;padding:8px 14px;margin:2px;border-radius:20px;cursor:pointer}
+nav button.active{background:#fff;color:#111}
+.search{padding:15px;text-align:center}
+.search input{width:90%;max-width:500px;padding:12px;border-radius:25px;border:1px solid #ddd;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:15px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:14px}
+.badge{background:#ffcc00;padding:4px 8px;border-radius:5px;font-size:11px;font-weight:bold}
+.price{color:#e91e63;font-size:20px;font-weight:bold;margin:6px 0}
+.old{color:#999;text-decoration:line-through;font-size:13px}
+.card p{font-size:13px;color:#555;line-height:1.5}
+.btn{display:block;background:#111;color:#fff;text-align:center;padding:10px;margin-top:10px;border-radius:8px;text-decoration:none;font-weight:bold}
+footer{background:#111;color:#fff;text-align:center;padding:20px;font-size:13px}
+.detail{display:none;background:#fff8dc;padding:10px;margin-top:8px;border-radius:8px;font-size:13px}
+</style>
+</head>
+<body>
+
+<!-- LOGO ADDED HERE -->
+<header>
+<img src="logo.png" alt="ShoppingGuru.pk Logo">
+<p>New Cheez • Price in Pakistan • Honest Review • China Gadgets</p>
+</header>
+
+<!-- BANNER ADDED HERE -->
+<div class="banner">
+<img src="banner.png" alt="ShoppingGuru.pk Banner">
+</div>
+
+<nav>
+<button class="active" onclick="filterCat('all',this)">All</button>
+<button onclick="filterCat('phone',this)">📱 Phones</button>
+<button onclick="filterCat('watch',this)">⌚ Watches</button>
+<button onclick="filterCat('gadget',this)">🎧 Gadgets</button>
+<button onclick="filterCat('cloth',this)">👕 Clothes</button>
+<button onclick="filterCat('shoes',this)">👟 Shoes</button>
+<button onclick="filterCat('cosmetic',this)">💄 Cosmetics</button>
+</nav>
+
+<div class="search"><input id="search" onkeyup="searchPost()" placeholder="Search karo... iPhone, Watch, Earbuds, Lipstick..."></div>
+
+<div class="grid" id="grid">
+
+<!-- PHONES -->
+<div class="card phone"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600"><div class="card-body"><span class="badge">📱 PHONE</span><h3>iPhone 17 Pro Max</h3><div class="price">Rs 585,000 <span class="old">Rs 620,000</span></div><p>6.9 Display, A19 Pro Chip, 48MP Camera, 5000mAh.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.9/5 | PTA Approved</div><a class="btn" href="https://scholarship883.github.io/">Price Check / Buy Now</a></div></div>
+<div class="card phone"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600"><div class="card-body"><span class="badge">📱 PHONE</span><h3>Samsung Galaxy S26 Ultra</h3><div class="price">Rs 485,000</div><p>200MP Camera, S-Pen, AI Features.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.8/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card phone"><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600"><div class="card-body"><span class="badge">📱 PHONE</span><h3>Vivo V60</h3><div class="price">Rs 165,000</div><p>Zeiss Camera, Best for Reels / TikTok.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.7/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card phone"><img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600"><div class="card-body"><span class="badge">📱 PHONE</span><h3>Redmi Note 14 Pro</h3><div class="price">Rs 89,999</div><p>Budget King, 200MP, 120Hz AMOLED.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card phone"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"><div class="card-body"><span class="badge">📱 PHONE</span><h3>Infinix Hot 60 Pro</h3><div class="price">Rs 45,999</div><p>Gaming ke liye best, 5000mAh.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+
+<!-- WATCHES -->
+<div class="card watch"><img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600"><div class="card-body"><span class="badge">⌚ WATCH</span><h3>Apple Watch Ultra 3</h3><div class="price">Rs 285,000</div><p>Best Smart Watch, GPS, Waterproof.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.9/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card watch"><img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600"><div class="card-body"><span class="badge">⌚ WATCH</span><h3>China X8 Ultra Watch</h3><div class="price">Rs 4,999</div><p>AmOLED, Calling, 7 Days Battery.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.4/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card watch"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"><div class="card-body"><span class="badge">⌚ WATCH</span><h3>Rolex Copy</h3><div class="price">Rs 12,500</div><p>Premium Look, Steel Chain.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.3/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card watch"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600"><div class="card-body"><span class="badge">⌚ WATCH</span><h3>Haylou Solar Pro</h3><div class="price">Rs 9,999</div><p>Original China, 20 Days Battery.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+<div class="card watch"><img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600"><div class="card-body"><span class="badge">⌚ WATCH</span><h3>Casio G-Shock</h3><div class="price">Rs 32,000</div><p>Rough Use, 10 Saal Chale.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.8/5</div><a class="btn" href="https://scholarship883.github.io/">Price Check</a></div></div>
+
+<!-- GADGETS -->
+<div class="card gadget"><img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600"><div class="card-body"><span class="badge">🎧 GADGET</span><h3>AirPods Pro 2 Copy</h3><div class="price">Rs 2,999</div><p>ANC, Wireless Charging.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card gadget"><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"><div class="card-body"><span class="badge">🎧 GADGET</span><h3>Mini Drone 4K</h3><div class="price">Rs 15,999</div><p>4K Video, 30 Min Fly.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.4/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card gadget"><img src="https://images.unsplash.com/photo-1600003263720-95b45a4035d5?w=600"><div class="card-body"><span class="badge">🎧 GADGET</span><h3>Mini Projector</h3><div class="price">Rs 12,500</div><p>1080p, WiFi, Netflix.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card gadget"><img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600"><div class="card-body"><span class="badge">🎧 GADGET</span><h3>JBL Speaker Copy</h3><div class="price">Rs 3,499</div><p>Loud Bass, Waterproof.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.3/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card gadget"><img src="https://images.unsplash.com/photo-1583864697784-a0efc8379f70?w=600"><div class="card-body"><span class="badge">🎧 GADGET</span><h3>20000mAh Power Bank</h3><div class="price">Rs 4,200</div><p>Fast Charging, 2 Phone Ek Sath.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.7/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+
+<!-- CLOTHES -->
+<div class="card cloth"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600"><div class="card-body"><span class="badge">👕 CLOTHES</span><h3>Oversized Hoodie</h3><div class="price">Rs 2,499</div><p>China Fleece, Garam.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cloth"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600"><div class="card-body"><span class="badge">👕 CLOTHES</span><h3>Ladies 3 Piece Lawn</h3><div class="price">Rs 3,999</div><p>New Design 2026.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.8/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cloth"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600"><div class="card-body"><span class="badge">👕 CLOTHES</span><h3>Mens Winter Jacket</h3><div class="price">Rs 5,999</div><p>Waterproof, Garam.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cloth"><img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"><div class="card-body"><span class="badge">👕 CLOTHES</span><h3>Baggy Jeans</h3><div class="price">Rs 2,899</div><p>Trending TikTok Style.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.4/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cloth"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600"><div class="card-body"><span class="badge">👕 CLOTHES</span><h3>T-Shirt Pack of 3</h3><div class="price">Rs 1,999</div><p>Cotton, Summer.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+
+<!-- SHOES -->
+<div class="card shoes"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"><div class="card-body"><span class="badge">👟 SHOES</span><h3>Nike Jordan 1 Copy</h3><div class="price">Rs 5,499</div><p>Premium Copy, Comfortable.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card shoes"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600"><div class="card-body"><span class="badge">👟 SHOES</span><h3>Adidas Sneaker White</h3><div class="price">Rs 4,299</div><p>Daily Use, Soft Sole.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card shoes"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600"><div class="card-body"><span class="badge">👟 SHOES</span><h3>Nike Air Force China</h3><div class="price">Rs 4,999</div><p>Best Seller on Daraz.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.7/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card shoes"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600"><div class="card-body"><span class="badge">👟 SHOES</span><h3>Joggers Running</h3><div class="price">Rs 3,299</div><p>Light Weight, Gym.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.4/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card shoes"><img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600"><div class="card-body"><span class="badge">👟 SHOES</span><h3>Ladies Heels</h3><div class="price">Rs 2,999</div><p>Stylish, Shadi / Party.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+
+<!-- COSMETICS -->
+<div class="card cosmetic"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600"><div class="card-body"><span class="badge">💄 COSMETICS</span><h3>China Makeup Kit 12 Pcs</h3><div class="price">Rs 2,999</div><p>Full Kit, Lipstick, Eyeshadow.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cosmetic"><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600"><div class="card-body"><span class="badge">💄 COSMETICS</span><h3>Matte Lipstick Set 6 Pcs</h3><div class="price">Rs 1,499</div><p>Long Lasting, Waterproof.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.7/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cosmetic"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600"><div class="card-body"><span class="badge">💄 COSMETICS</span><h3>Vitamin C Serum</h3><div class="price">Rs 1,899</div><p>Face Glow, Dark Spots Khatam.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.8/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cosmetic"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"><div class="card-body"><span class="badge">💄 COSMETICS</span><h3>Foundation Fit Me</h3><div class="price">Rs 1,299</div><p>All Skin Types, Natural Look.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.5/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+<div class="card cosmetic"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"><div class="card-body"><span class="badge">💄 COSMETICS</span><h3>Face Wash Rice Water</h3><div class="price">Rs 999</div><p>China Viral, TikTok Famous.</p><button onclick="show(this)">Detail Dekho ↓</button><div class="detail"><b>Rating:</b> ⭐ 4.6/5</div><a class="btn" href="https://scholarship883.github.io/">Buy Now</a></div></div>
+
+</div>
+<footer>© 2026 ShoppingGuru.pk | Price in Pakistan</footer>
+<script>
+function filterCat(c,btn){document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.card').forEach(card=>{card.style.display=(c=='all'||card.classList.contains(c))?'block':'none';});}
+function searchPost(){let v=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(card=>{card.style.display=card.innerText.toLowerCase().includes(v)?'block':'none';});}
+function show(btn){let d=btn.nextElementSibling;d.style.display=d.style.display=='block'?'none':'block';}
+</script>
+</body>
+                                                     </html>
